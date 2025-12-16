@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PANKAJ BHARDWAJ - Landing Page</title>
+<title>ગુજરાતી TRADER – Premium Trading Page</title>
 
-<!-- Meta Pixel Code (NEW & CORRECT) -->
+<!-- ================= META PIXEL CODE (SINGLE PIXEL ONLY) ================= -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,6 +15,7 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1395465795561248');
 fbq('track', 'PageView');
 </script>
@@ -23,115 +24,172 @@ fbq('track', 'PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1395465795561248&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
+<!-- ====================================================================== -->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
 
-    /* Wrapper for mobile spacing */
-    .container {
-        width: 100%;
-        max-width: 500px;
-        margin: auto;
-        padding: 15px;
-    }
+.gold {
+    background: linear-gradient(90deg, #ffd700, #ffbb00, #ff9d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    /* Logo */
-    .profile-img {
-        width: 60%;
-        max-width: 220px;
-        margin-top: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+}
 
-    /* Title */
-    .title {
-        font-size: 30px;
-        font-weight: bold;
-        color: #ff6600;
-        margin-top: 10px;
-    }
+.logo {
+    width: 180px;
+    border-radius: 50%;
+    animation: glow 3s infinite ease-in-out, float 5s infinite ease-in-out;
+}
 
-    /* Beautiful Join Button */
-    .btn {
-        background: linear-gradient(45deg, red, blue);
-        padding: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        border-radius: 12px;
-        font-size: 22px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        margin: 20px auto;
-        width: 90%;
-        max-width: 380px;
-        box-shadow: 0px 0px 14px rgba(0, 0, 255, 0.5);
-    }
+@keyframes glow {
+    0% { filter: drop-shadow(0 0 10px #ff0000); }
+    50% { filter: drop-shadow(0 0 25px #ff3b3b); }
+    100% { filter: drop-shadow(0 0 10px #ff0000); }
+}
 
-    /* Icons */
-    .telegram-icon {
-        width: 30px;
-        height: 30px;
-    }
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
 
-    /* Info Boxes */
-    .box {
-        background: #fff3cd;
-        padding: 15px;
-        margin: 12px auto;
-        width: 90%;
-        border-radius: 12px;
-        font-size: 18px;
-    }
+.title {
+    font-size: 42px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #d7d7d7;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 10px 26px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    background: #ff0000;
+    box-shadow: 0 0 14px #ff1a1a, 0 0 18px #ff2d2d;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    transform: scale(1.10);
+    box-shadow: 0 0 28px #ff3b3b;
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+.section {
+    width: 90%;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #aaa;
+    font-size: 14px;
+}
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<div class="hero">
+    <img src="https://uploads.onecompiler.io/445e5df86/445tc7ue3/330.png"
+         class="logo"
+         alt="Gujarati Trader Logo">
 
-    <!-- LOGO -->
-    <img src="https://uploads.onecompiler.io/445e5df86/44796xsaj/1325.jpg" class="profile-img">
+    <div class="title gold">ગુજરાતી TRADER</div>
+    <div class="subtitle">India’s Premium Gujarati Trading Community 🚀</div>
 
-    <!-- NAME -->
-    <div class="title">🔥 PANKAJ BHARDWAJ 🔥</div>
-
-    <!-- JOIN BUTTON BELOW NAME -->
-    <a class="btn" href="https://t.me/+1DoDltTHBp0wYmY1">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="telegram-icon">
-        JOIN OUR TELEGRAM
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="telegram-icon">
+    <!-- TELEGRAM SUBSCRIBE BUTTON (SUBSCRIBE EVENT) -->
+    <a class="btn"
+       target="_blank"
+       href="https://t.me/+zrnr97SHlsAyYjZl"
+       onclick="fbq('track','Subscribe');">
+        <i class="fab fa-telegram-plane"></i>
+        JOIN PREMIUM TELEGRAM
+        <i class="fab fa-telegram-plane"></i>
     </a>
+</div>
 
-    <p style="font-size:18px; font-weight:bold;">⚡ In Morning 9:00 | Best Trading Signals and Market Analysis⚡</p>
+<div class="section">
+    <h2 class="gold">📈 Learn Stock Market Skills</h2>
+    <p>
+        ✔ Intraday & Swing Trading<br>
+        ✔ Nifty / BankNifty Levels<br>
+        ✔ Options Basics & Strategies<br>
+        ✔ Price Action Learning<br>
+        ✔ Chart Patterns<br>
+        ✔ Trading Psychology
+    </p>
+</div>
 
-    <!-- INFO BOXES -->
-    <div class="box">Learn New Skills 📊</div>
-    <div class="box">💎DAILY MARKET ANALYSIS💎</div>
-    <div class="box">⚡educational-INTRA DAY OPTION TRADERS ⚡</div>
-    <div class="box">📚 15+ Years Experience in Share Market 📚</div>
+<div class="section">
+    <h2 class="gold">🔥 Why Join Gujarati TRADER?</h2>
+    <p>
+        ✔ Educational Market Levels<br>
+        ✔ Free Learning Calls<br>
+        ✔ Live Market Guidance<br>
+        ✔ Beginner-Friendly Community<br>
+        ✔ Trusted Trading Network
+    </p>
+</div>
 
-    <!-- SECOND BUTTON -->
-    <a class="btn" href="https://t.me/+1DoDltTHBp0wYmY1">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="telegram-icon">
-        JOIN OUR TELEGRAM
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="telegram-icon">
+<div style="text-align:center;">
+    <a class="btn"
+       target="_blank"
+       href="https://t.me/+zrnr97SHlsAyYjZl"
+       onclick="fbq('track','Subscribe');">
+        <i class="fab fa-telegram-plane"></i>
+        JOIN NOW – 100% FREE
+        <i class="fab fa-telegram-plane"></i>
     </a>
+</div>
 
+<div class="footer">
+    © 2025 Gujarati TRADER – All Rights Reserved<br>
+    Premium Trading Community • Made in Gujarat 🇮🇳
 </div>
 
 </body>
 </html>
-
