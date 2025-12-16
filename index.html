@@ -5,26 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ગુજરાતી TRADER – Premium Trading Page</title>
 
-<!-- ================= META PIXEL CODE ================= -->
+<!-- ================= META PIXEL (SAFE MODE) ================= -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){
-n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+(function() {
+  if (window.__pixelLoaded) return;
+  window.__pixelLoaded = true;
 
-fbq('init', '1395465795561248');
-fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){
+  n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}
+  (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1395465795561248');
+
+  // 🔐 PageView fires ONLY ONCE per session
+  if (!sessionStorage.getItem('pv_fired')) {
+    fbq('track', 'PageView');
+    sessionStorage.setItem('pv_fired', '1');
+  }
+})();
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1395465795561248&ev=PageView&noscript=1"/>
 </noscript>
-<!-- ==================================================== -->
+<!-- ========================================================== -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
@@ -53,14 +63,21 @@ background:rgba(255,255,255,.07);border-radius:14px}
 .footer{text-align:center;padding:20px;color:#aaa;font-size:14px}
 </style>
 
+<!-- 🔐 SUBSCRIBE EVENT – GLOBAL SINGLE FIRE -->
 <script>
-let subscribed = false;
-function trackSubscribe() {
-  if (!subscribed) {
-    fbq('track', 'Subscribe');
-    subscribed = true;
-  }
-}
+document.addEventListener('DOMContentLoaded', function () {
+  let subscribed = sessionStorage.getItem('sub_fired');
+
+  document.querySelectorAll('.telegram-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (!subscribed) {
+        fbq('track', 'Subscribe');
+        sessionStorage.setItem('sub_fired', '1');
+        subscribed = true;
+      }
+    }, { once: true });
+  });
+});
 </script>
 </head>
 
@@ -71,9 +88,8 @@ function trackSubscribe() {
 <div class="title gold">ગુજરાતી TRADER</div>
 <div class="subtitle">India’s Premium Gujarati Trading Community 🚀</div>
 
-<a class="btn" target="_blank"
-href="https://t.me/+zrnr97SHlsAyYjZl"
-onclick="trackSubscribe();">
+<a class="btn telegram-btn" target="_blank"
+href="https://t.me/+zrnr97SHlsAyYjZl">
 <i class="fab fa-telegram-plane"></i> JOIN PREMIUM TELEGRAM
 </a>
 </div>
@@ -91,9 +107,8 @@ onclick="trackSubscribe();">
 </div>
 
 <div style="text-align:center;">
-<a class="btn" target="_blank"
-href="https://t.me/+zrnr97SHlsAyYjZl"
-onclick="trackSubscribe();">
+<a class="btn telegram-btn" target="_blank"
+href="https://t.me/+zrnr97SHlsAyYjZl">
 <i class="fab fa-telegram-plane"></i> JOIN NOW – 100% FREE
 </a>
 </div>
